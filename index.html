@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistica y Transporte de Camiones | Titan Truck Caribe </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos personalizados */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/341f3d0d-2206-45c5-8bb6-77dc668ab56b.png') no-repeat center center;
+            background-size: cover;
+            height: 80vh;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+        
+        .truck-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd7eb72d-e48d-4260-b738-8a5db6c928e2.png" alt="Logo de TransCamiones S.A. con camión azul" class="h-12">
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#inicio" class="py-4 px-2 text-gray-600 font-semibold hover:text-blue-500 transition duration-300">Inicio</a>
+                        <a href="#servicios" class="py-4 px-2 text-gray-600 font-semibold hover:text-blue-500 transition duration-300">Servicios</a>
+                        <a href="#flota" class="py-4 px-2 text-gray-600 font-semibold hover:text-blue-500 transition duration-300">Nuestra Flota</a>
+                        <a href="#nosotros" class="py-4 px-2 text-gray-600 font-semibold hover:text-blue-500 transition duration-300">Nosotros</a>
+                        <a href="#contacto" class="py-4 px-2 text-gray-600 font-semibold hover:text-blue-500 transition duration-300">Contacto</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="tel:+541112345678" class="py-2 px-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition duration-300">
+                        <i class="fas fa-phone mr-1"></i> Llamar ahora
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div class="hidden mobile-menu">
+            <ul>
+                <li><a href="#inicio" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Inicio</a></li>
+                <li><a href="#servicios" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Servicios</a></li>
+                <li><a href="#flota" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Nuestra Flota</a></li>
+                <li><a href="#nosotros" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Nosotros</a></li>
+                <li><a href="#contacto" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-section flex items-center justify-center text-center text-white animate-fade">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Transporte de Carga Profesional</h1>
+            <p class="text-xl md:text-2xl mb-8">Soluciones logísticas integrales con más de 15 años de experiencia</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contacto" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Cotizar Ahora</a>
+                <a href="#servicios" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Nuestros Servicios de Transporte</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1fa8c8e4-8def-4346-8a78-a0b6dee4f1fc.png" alt="Camión articulado transportando contenedores" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Transporte Nacional</h3>
+                        <p class="text-gray-600 mb-4">Distribución eficiente de mercancías en todo el territorio nacional con seguimiento GPS en tiempo real.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Cobertura en todas las provincias</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Entregas programadas</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Monitoreo 24/7</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a50f1edb-5b56-4866-90ea-6ae33b91d7bc.png" alt="Camión refrigerado en operación" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Transporte Refrigerado</h3>
+                        <p class="text-gray-600 mb-4">Flota especializada para mercancías que requieren control de temperatura en todo momento.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Rango de temperatura controlada</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Certificación internacional</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Registro de temperatura continuo</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2e88fd2e-5fe0-40d0-9ae3-801c987b4f7f.png" alt="Grúa cargando contenedores en puerto" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Logística Portuaria</h3>
+                        <p class="text-gray-600 mb-4">Soluciones integrales para la gestión y transporte de mercancías en zonas portuarias.</p>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Despacho aduanero</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Carga y descarga especializada</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i> <span>Almacenamiento temporal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Flota -->
+    <section id="flota" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Nuestra Flota de Camiones</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Camión 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md truck-card transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/36833eca-7562-471e-be7e-e062a9366af0.png" alt="Camión tractom semi remolque color rojo en carretera" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tractor Semirremolque</h3>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-700"><i class="fas fa-truck mr-1"></i> Capacidad: 30 Ton</span>
+                            <span class="text-gray-700"><i class="fas fa-ruler-combined mr-1"></i> 13.6 m</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Ideal para transportes de larga distancia con alta capacidad de carga.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-500 font-bold">Disponible</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300" onclick="showWhatsAppModal('Cotizar Tractom Semi Remolque')">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Camión 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md truck-card transition duration-500">
+                    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-c404-61f7-ae63-11240f87e2b2/raw?se=2025-08-20T04%3A58%3A38Z&sp=r&sv=2024-08-04&sr=b&scid=bcd3d373-9120-5ccc-8826-e6190eedb6e6&skoid=71e8fa5c-90a9-4c17-827b-14c3005164d6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-19T22%3A32%3A05Z&ske=2025-08-20T22%3A32%3A05Z&sks=b&skv=2024-08-04&sig=KDcqCafTBdDtamMBim7u4W6%2Bk48j28aEt5g/ecMQTLw%3D" alt="Camión refrigerado blanco con puerta trasera abierta" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Camión Refrigerado</h3>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-700"><i class="fas fa-truck mr-1"></i> Capacidad: 15 Ton</span>
+                            <span class="text-gray-700"><i class="fas fa-temperature-low mr-1"></i> -20°C a +4°C</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Equipo especializado para transporte de productos perecederos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-500 font-bold">Disponible</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300" onclick="showWhatsAppModal('Cotizar Camión Refrigerado')">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Camion 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md truck-card transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8bf44ed4-0b91-4496-826b-15b5d192dadd.png" alt="Camión volquete amarillo descargando material" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Camion Volquete</h3>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-700"><i class="fas fa-truck mr-1"></i> Capacidad: 8 m³</span>
+                            <span class="text-gray-700"><i class="fas fa-ruler-combined mr-1"></i> 6.5 m</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Perfecto para transporte de materiales a granel y de construcción.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-500 font-bold">En ruta</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-300" onclick="showWhatsAppModal('Cotizar Camión Volquete')">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contacto" class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Ver toda la flota
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold Tmb-6">Nuestra Empresa</h2>
+                    <p class="text-gray-600 mb-4"> Titan Truck Caribe es una empresa líder en el sector logístico con más de 15 años de experiencia brindando soluciones de transporte eficientes y confiables.</p>
+                    <p class="text-gray-600 mb-6">Nuestro equipo de profesionales altamente capacitados garantiza que su carga llegue a destino de manera segura y puntual, cumpliendo con los más altos estándares de calidad y servicio.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 max-w-md">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 text-3xl mb-2">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4 class="font-bold">150+</h4>
+                            <p class="text-sm text-gray-600">Vehículos propios</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 text-3xl mb-2">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 class="font-bold">25+</h4>
+                            <p class="text-sm text-gray-600">Destinos nacionales</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 text-3xl mb-2">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="font-bold">15 Años</h4>
+                            <p class="text-sm text-gray-600">Experiencia</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 text-3xl mb-2">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 class="font-bold">120+</h4>
+                            <p class="text-sm text-gray-600">Colaboradores</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1e724979-23b1-40e1-872e-a0a47065574a.png" alt="Equipo de TransCamiones reunido frente a nuestros almacenes" class="w-full rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center mb-8">Nuestros Valores</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Seguridad</h4>
+                        <p class="text-gray-600">Priorizamos la seguridad de su carga, de nuestros conductores y de la comunidad.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Puntualidad</h4>
+                        <p class="text-gray-600">Compromiso absoluto con los tiempos de entrega acordados.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Transparencia</h4>
+                        <p class="text-gray-600">Relaciones claras y honestas con clientes, proveedores y colaboradores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Contactenos</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nombre completo</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Correo electronico</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-1">Telefono</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-1">Servicio de interes</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Seleccione un servicio</option>
+                                <option value="Transporte Nacional">Transporte Nacional</option>
+                                <option value="Transporte Refrigerado">Transporte Refrigerado</option>
+                                <option value="Logistica Portuaria">Logistica Portuaria</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar Consulta
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Informacion de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-2xl mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Oficina Central</h4>
+                                    <p class="text-gray-600">Av. del Transporte C 1ra, Piso 3, Ciudad Santo Domingo Distrito Nacional </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-2xl mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Telefonos</h4>
+                                    <p class="text-gray-600">+1 829-440-9619 (Ventas)</p>
+                                    <p class="text-gray-600">+1 829-440-9619 (Emergencias 24/7)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-2xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Correo electronico</h4>
+                                    <p class="text-gray-600">TitanTruckCaribe@gmail.com</p>
+                                    <p class="text-gray-600">TitanTruckCaribe@transcamiones.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-500 text-2xl mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horario de atencion</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 8:00 a 18:00 hs</p>
+                                    <p class="text-gray-600">Sabados: 9:00 a 13:00 hs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-3">Siganos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-500 hover:text-blue-700 text-2xl">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="text-blue-400 hover:text-blue-600 text-2xl">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-pink-500 hover:text-pink-700 text-2xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-red-500 hover:text-red-700 text-2xl">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="text-gray-700 hover:text-gray-900 text-2xl">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Flotante -->
+    <div class="floating-whatsapp">
+        <button onclick="showWhatsAppModal('Consulta general')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-300 flex items-center">
+            <i class="fab fa-whatsapp text-2xl mr-2"></i>
+            <span>WhatsApp</span>
+        </button>
+    </div>
+
+    <!-- Modal WhatsApp -->
+    <div id="whatsappModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Contactar por WhatsApp</h3>
+                <button onclick="hideModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <p class="mb-4 text-gray-600">Complete el formulario para contactar con nuestro equipo de transporte:</p>
+            
+            <form id="whatsappForm" class="space-y-4">
+                <input type="hidden" id="whatsappService" name="service" value="">
+                
+                <div>
+                    <label for="whatsappName" class="block text-gray-700 mb-1">Nombre</label>
+                    <input type="text" id="whatsappName" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="whatsappPhone" class="block text-gray-700 mb-1">Telefono</label>
+                    <input type="tel" id="whatsappPhone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="whatsappMessage" class="block text-gray-700 mb-1">Mensaje</label>
+                    <textarea id="whatsappMessage" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                
+                <button type="button" onclick="sendWhatsAppMessage()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Titan Truck Caribe</h3>
+                    <p class="text-gray-400">Soluciones logisticas integrales para el transporte de carga en todo el territorio nacional.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+                        <li><a href="#flota" class="text-gray-400 hover:text-white transition duration-300">Flota</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transporte Nacional</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Transporte Refrigerado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Logistica Portuaria</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Almacenamiento</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Distribucion</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Av. del Transporte Av. del Transporte C 1ra, Piso 3, Ciudad Santo Domingo Distrito Nacional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+1 829-440-9619</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">TitanTruckCaribe@gmail.com</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Titan Truck Caribe Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Politica de privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terminos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Menu movil
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // WhatsApp Modal
+        function showWhatsAppModal(service) {
+            document.getElementById('whatsappModal').classList.remove('hidden');
+            document.getElementById('whatsappService').value = service || 'Consulta general';
+        }
+        
+        function hideModal() {
+            document.getElementById('whatsappModal').classList.add('hidden');
+        }
+        
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('whatsappName').value;
+            const phone = document.getElementById('whatsappPhone').value;
+            const service = document.getElementById('whatsappService').value;
+            const message = document.getElementById('whatsappMessage').value;
+            
+            if (!name || !phone || !message) {
+                alert('Por favor complete todos los campos obligatorios');
+                return;
+            }
+            
+            // Enviar mensaje por WhatsApp (numero de ejemplo)
+            const whatsappNumber = '8294409619';
+            const encodedMessage = encodeURIComponent(`Hola, mi nombre es ${name}. Estoy interesado en: ${service}\n\n${message}\n\nTelefono de contacto: ${phone}`);
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+            
+            // Registrar en la base de datos (simulacion)
+            registerWhatsAppLead(name, phone, service, message);
+            
+            hideModal();
+        }
+        
+        function registerWhatsAppLead(name, phone, service, message) {
+            // Aqui iria el codigo para registrar el lead en la base de datos
+            console.log('Lead registrado:', { name, phone, service, message });
+            
+            // Simulamos un registro exitoso
+            alert('Gracias por su mensaje. Nos contactaremos con usted pronto.');
+        }
+        
+        // Formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simular envio del formulario
+            alert('Gracias por su mensaje. Nos contactaremos con usted pronto.');
+            
+            // Aqui iria el codigo para enviar el formulario a un servidor
+            this.reset();
+        });
+        
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Cerrar menu movil si esta abierto
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
